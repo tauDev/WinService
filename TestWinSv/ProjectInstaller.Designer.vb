@@ -32,7 +32,9 @@
         '
         'RequestService
         '
+        Me.RequestService.DelayedAutoStart = True
         Me.RequestService.ServiceName = "AlertService"
+        Me.RequestService.StartType = System.ServiceProcess.ServiceStartMode.Automatic
         '
         'ProjectInstaller
         '
