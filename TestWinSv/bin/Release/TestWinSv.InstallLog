@@ -1,0 +1,34 @@
+﻿Installing assembly 'D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe
+   logfile = D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.InstallLog
+Installing service AlertService...
+Service AlertService has been successfully installed.
+Creating EventLog source AlertService in log Application...
+Committing assembly 'D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe
+   logfile = D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.InstallLog
+Uninstalling assembly 'D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe
+   logfile = D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.InstallLog
+Removing EventLog source AlertService.
+Service AlertService is being removed from the system...
+Service AlertService was successfully removed from the system.
+Installing assembly 'D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe
+   logfile = D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.InstallLog
+Installing service AlertService...
+Service AlertService has been successfully installed.
+Creating EventLog source AlertService in log Application...
+Committing assembly 'D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe
+   logfile = D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.InstallLog

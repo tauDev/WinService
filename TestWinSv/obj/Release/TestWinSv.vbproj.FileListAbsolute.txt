@@ -1,0 +1,11 @@
+D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe.config
+D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.exe
+D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.pdb
+D:\Project2018\TestWinSv\TestWinSv\bin\Release\TestWinSv.xml
+D:\Project2018\TestWinSv\TestWinSv\obj\Release\TestWinSv.Resources.resources
+D:\Project2018\TestWinSv\TestWinSv\obj\Release\TestWinSv.ProjectInstaller.resources
+D:\Project2018\TestWinSv\TestWinSv\obj\Release\TestWinSv.Service1.resources
+D:\Project2018\TestWinSv\TestWinSv\obj\Release\TestWinSv.vbproj.GenerateResource.Cache
+D:\Project2018\TestWinSv\TestWinSv\obj\Release\TestWinSv.exe
+D:\Project2018\TestWinSv\TestWinSv\obj\Release\TestWinSv.xml
+D:\Project2018\TestWinSv\TestWinSv\obj\Release\TestWinSv.pdb
