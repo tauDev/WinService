@@ -32,13 +32,16 @@ Public Class Service1
     End Sub
     Private Sub Timer1_Elapsed(sender As Object, e As Timers.ElapsedEventArgs) Handles Timer1.Elapsed
         Count += 1
-        Dim strPath As String = AppDomain.CurrentDomain.BaseDirectory + "Log.txt"
-        Dim lines() As String = {Count & "..calling time :" + DateTime.Now.ToString()}
-        System.IO.File.AppendAllLines(strPath, lines)
+        'Dim strPath As String = AppDomain.CurrentDomain.BaseDirectory + "Log.txt"
+        'Dim lines() As String = {Count & "..calling time :" + DateTime.Now.ToString()}
+        'System.IO.File.AppendAllLines(strPath, lines)
         If DateTime.Now.ToString("HH:mm") = "08:00" And STA = False Then
             'SELECTDATA()
             ' SENDMAILREQUESTAPPROVEOTHERDEPARTMENT("DOCNO", "ITEM", "ITEMNAME", "REQUEST", "PARINYA")
             STA = True
+            Dim strPath As String = AppDomain.CurrentDomain.BaseDirectory + "Log.txt"
+            Dim lines() As String = {Count & " Start send e-mail :" + DateTime.Now.ToString()}
+            System.IO.File.AppendAllLines(strPath, lines)
             CHECKSENDMAIL()
         End If
         ' Timer1.Enabled = False
@@ -230,31 +233,31 @@ Public Class Service1
                                 Threading.Thread.Sleep(10000)
                                 'Console.WriteLine("Sendmail to AccountCostApprove from  '" & Id & "' , " & MailApprove.ToString())
                             End If
-                            If typebom = "BOM" Then
-                                If CHECKBOMACTIVE(idf) = False And CHECKROUTEACTIVE(idf) = False Then
-                                    GETUSEREMAILFORAPPROVEREQUEST("22,23")
-                                    REQUESTCREATEBOM(Id, item, itemname, Users)
-                                    Dim strPath As String = AppDomain.CurrentDomain.BaseDirectory + "LogPro.txt"
-                                    Dim lines() As String = {"Sendmail for BOM ROUTE : " & Id & " : " & DateTime.Now.ToString()}
-                                    System.IO.File.AppendAllLines(strPath, lines)
-                                    Threading.Thread.Sleep(10000)
-                                ElseIf CHECKBOMACTIVE(idf) = True And CHECKROUTEACTIVE(idf) = False Then
-                                    GETUSEREMAILFORAPPROVEREQUEST("22,23")
-                                    REQUESTCREATEBOM(Id, item, itemname, Users)
-                                    Dim strPath As String = AppDomain.CurrentDomain.BaseDirectory + "LogPro.txt"
-                                    Dim lines() As String = {"Sendmail for ROUTE : " & Id & " : " & DateTime.Now.ToString()}
-                                    System.IO.File.AppendAllLines(strPath, lines)
-                                    Threading.Thread.Sleep(10000)
-                                ElseIf CHECKBOMACTIVE(idf) = False And CHECKROUTEACTIVE(idf) = True Then
-                                    GETUSEREMAILFORAPPROVEREQUEST("22,23")
-                                    REQUESTCREATEBOM(Id, item, itemname, Users)
-                                    Dim strPath As String = AppDomain.CurrentDomain.BaseDirectory + "LogPro.txt"
-                                    Dim lines() As String = {"Sendmail for BOM : " & Id & " : " & DateTime.Now.ToString()}
-                                    System.IO.File.AppendAllLines(strPath, lines)
-                                    Threading.Thread.Sleep(10000)
-                                End If
-                                'Console.WriteLine("Sendmail to RD from  '" & Id & "' , " & MailApprove.ToString())
-                            End If
+                            'If typebom = "BOM" Then
+                            '    If CHECKBOMACTIVE(idf) = False And CHECKROUTEACTIVE(idf) = False Then
+                            '        GETUSEREMAILFORAPPROVEREQUEST("22,23")
+                            '        REQUESTCREATEBOM(Id, item, itemname, Users)
+                            '        Dim strPath As String = AppDomain.CurrentDomain.BaseDirectory + "LogPro.txt"
+                            '        Dim lines() As String = {"Sendmail for BOM ROUTE : " & Id & " : " & DateTime.Now.ToString()}
+                            '        System.IO.File.AppendAllLines(strPath, lines)
+                            '        Threading.Thread.Sleep(10000)
+                            '    ElseIf CHECKBOMACTIVE(idf) = True And CHECKROUTEACTIVE(idf) = False Then
+                            '        GETUSEREMAILFORAPPROVEREQUEST("22,23")
+                            '        REQUESTCREATEBOM(Id, item, itemname, Users)
+                            '        Dim strPath As String = AppDomain.CurrentDomain.BaseDirectory + "LogPro.txt"
+                            '        Dim lines() As String = {"Sendmail for ROUTE : " & Id & " : " & DateTime.Now.ToString()}
+                            '        System.IO.File.AppendAllLines(strPath, lines)
+                            '        Threading.Thread.Sleep(10000)
+                            '    ElseIf CHECKBOMACTIVE(idf) = False And CHECKROUTEACTIVE(idf) = True Then
+                            '        GETUSEREMAILFORAPPROVEREQUEST("22,23")
+                            '        REQUESTCREATEBOM(Id, item, itemname, Users)
+                            '        Dim strPath As String = AppDomain.CurrentDomain.BaseDirectory + "LogPro.txt"
+                            '        Dim lines() As String = {"Sendmail for BOM : " & Id & " : " & DateTime.Now.ToString()}
+                            '        System.IO.File.AppendAllLines(strPath, lines)
+                            '        Threading.Thread.Sleep(10000)
+                            '    End If
+                            'Console.WriteLine("Sendmail to RD from  '" & Id & "' , " & MailApprove.ToString())
+                            'End If
                             'If dtr.IsDBNull(dtr.GetOrdinal("AccountFinanceApprove")) And idf = "2" Then
                             '    GETUSEREMAILFORAPPROVEREQUEST("17,19")
                             '    SENDMAILREQUESTAPPROVEOTHERDEPARTMENT(Id, item, itemname, idf, Users)
